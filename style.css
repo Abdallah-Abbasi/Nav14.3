@@ -1,0 +1,52 @@
+* {
+    padding: 0%;
+    margin: 0%;
+}
+
+#navBar {
+    background-color: gold;
+    padding: 10px 0px;
+}
+
+#navBar nav  a {
+    padding: 0px 20px;
+    text-decoration: none;
+    position: relative;
+}
+#navBar nav a::before{
+    content: '';
+    position: absolute;
+    border-top: 1px solid black;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    opacity: 0;
+            
+}
+
+#navBar nav a:hover::before{
+    width: 100%;
+    opacity: 1;
+    border-top: 2px solid black;
+    transition: width 1s,opacity 1s,border-top 1s;
+
+}
+
+#navBar nav a::after{
+    content: '';
+    position: absolute;
+    border-top: 1px solid black;
+    top: 20px;
+    right: 0;
+    width:0%;
+    height: 100%;
+    opacity: 0;
+}
+
+#navBar nav a:hover::after{
+    width: 100%;
+    opacity: 1;
+    border-top: 2px solid black;
+    transition: width 0.9s,opacity 1s,border-top 1s;
+}
